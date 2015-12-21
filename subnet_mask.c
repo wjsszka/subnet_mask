@@ -32,6 +32,7 @@ main (int argc,char *argv[]) {
 				addr.s_addr = htonl(net);
 				printf("%s/%d\n", inet_ntoa(addr), i + 1);
 				mask = 0xffffffff << (32 - i - 1);
+//				printf("0x%x\n",mask);
 				net = (net | ~mask) + 1;
 				break;
 			}
@@ -47,4 +48,3 @@ main (int argc,char *argv[]) {
 	}
 	return 0;
 }
-
