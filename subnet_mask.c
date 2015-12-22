@@ -11,7 +11,6 @@ main (int argc,char *argv[]) {
 
 	ip_start = ntohl(inet_addr(argv[1]));
 	ip_end = ntohl(inet_addr(argv[2]));
-//	printf("0x%x,0x%x\n", ip_start, ip_end);
 
 	uint32_t net = ip_start;
 	uint32_t mask;
