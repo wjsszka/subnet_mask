@@ -40,8 +40,6 @@ main (int argc,char *argv[]) {
 				printf("Can't open mask\n");
 				exit(4);
 		}
-		char *test1;
-		char *test2;
 		while((fgets(bufferstart,MAXBLINE,fpstart) != NULL)&&(fgets(bufferend,MAXBLINE,fpend) != NULL)) {
 				ip_start = ntohl(inet_addr(bufferstart));
 				ip_end = ntohl(inet_addr(bufferend));
