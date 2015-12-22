@@ -28,11 +28,9 @@ main (int argc,char *argv[]) {
 //			printf("net_begin 0x%x,net_end 0x%x,net 0x%x, mask 0x%x\n", net & mask, net | ~mask, net, mask);
 
 			if ( (net & mask) != net || (net | ~mask) > ip_end ){
-//				printf("put\n");
 				addr.s_addr = htonl(net);
 				printf("%s/%d\n", inet_ntoa(addr), i + 1);
 				mask = 0xffffffff << (32 - i - 1);
-//				printf("0x%x\n",mask);
 				net = (net | ~mask) + 1;
 				break;
 			}
